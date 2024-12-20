@@ -224,7 +224,7 @@ if __name__ == "__main__":
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-        for student_id, student_name, entry in tqdm(student_dirs[:10], desc="Processing Students"):
+        for student_id, student_name, entry in tqdm(student_dirs, desc="Processing Students"):
             baseline_ckpt = entry / "student_checkpoint.pth"
             improved_ckpt = entry / "student_improved_checkpoint.pth"
 
